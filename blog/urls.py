@@ -1,3 +1,6 @@
+from django.urls import path
+from . import views
+
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,8 +18,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    path('', views.post_list, name='post_list'),
 ]
