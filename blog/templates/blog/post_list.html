@@ -6,27 +6,13 @@
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
-
+        {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Gilles Deleuze (junto a Félix Guattari) es uno de los autores criticados por la obra de Alan Sokal y Bricmont, Imposturas intelectuales por, según sugieren los autores, escribir pasajes sin sentido, abusando de conceptos científicos de forma equivocada y mezclándolos con lenguaje pseudocientífico. Cabe destacar que estas opiniones de Sokal y Bricmont han sido duramente criticadas por otros intelectuales, como el filósofo francés Jacques Derrida y el sociolingüísta Baudouin Jordant, al considerarlas tendenciosas o insuficientemente formadas respecto de los temas que pretendían estar criticando. Véase Escándalo Sokal.
-
-            </p>
+            <p> publicado: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+    {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Es sencillo buscar correspondencias entre tipos de sociedad y tipos de máquinas, no porque las máquinas sean determinantes, sino porque expresan las formaciones sociales que las han originado y que las utilizan. Las antiguas sociedades de soberanía operaban con máquinas simples, palancas, poleas, relojes; las sociedades disciplinarias posteriores se equiparon con máquinas energéticas, con el riesgo pasivo de la entropía y el riesgo activo del sabotaje; las sociedades de control actúan mediante máquinas de un tercer tipo, máquinas informáticas y ordenadores cuyo riesgo pasivo son las interferencias y cuyo riesgo activo son la piratería y la inoculación de virus. No es solamente una evolución tecnológica, es una profunda mutación del capitalismo.
-            </p>
-        </div>
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My third post</a></h2>
-            <p>Junto con Kant y Bergson, Deleuze considera que las nociones comunes de tiempo y espacio son formas unificantes impuestas por el sujeto. Concluye que la diferencia pura es no-espacio-temporal; se trata de una idea, lo que llamará «lo virtual» haciendo referencia a la definición de Proust sobre aquello que es constante tanto en el pasado como en el presente. Aunque las ideas virtuales de Deleuze parezcan semejantes a las formas platónicas o a las ideas de razón pura en Kant, no se trata de originales o de modelos, ni trascienden la experiencia. Por el contrario, se trata de condiciones de una experiencia particular, de su diferencia interna en sí misma. La diferencia en Deleuze es un sistema de relaciones diferenciales que crea espacios, tiempos y sensaciones particulares.
-
-            </p>
-        </div>
     </body>
 </html>
